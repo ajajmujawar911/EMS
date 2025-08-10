@@ -4,8 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN ["mvn","clean"]
+RUN mvn clean package 
 
-CMD ["mvn","spring-boot:run"]
+CMD ["java", "-jar", "target/ems-1.0.0.jar"]
 
-EXPOSE 80
+
